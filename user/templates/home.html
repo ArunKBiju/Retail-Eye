@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Shopping</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-with-image">Real-time Shopping</h1>
+        <br>
+        <br>
+        <br>
+        <div class="amoeba-container">
+            <div class="amoeba"><img src="{% static 'images/title.jpg' %}" alt="Tech 1"></div>
+            <div class="amoeba"><img src="{% static 'images/title.jpg' %}" alt="Tech 2"></div>
+            <div class="amoeba"><img src="{% static 'images/title.jpg' %}" alt="Tech 3"></div>
+        </div>
+
+        <a href="{% url 'user_login' %}" class="start-btn">Let's Start Shopping Now</a>
+    </div>
+</body>
+</html>

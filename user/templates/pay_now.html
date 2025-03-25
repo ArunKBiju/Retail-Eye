@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Now</title>
+    <link rel="stylesheet" href="{% static 'css/pn.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pay Now</h1>
+        </header>
+        <main>
+            <div class="customer-info">
+                <p><strong>Customer Name:</strong> {{ customer_name }}</p>
+                <p><strong>Customer ID:</strong> {{ customer_id }}</p>
+            </div>
+            <div class="bill-info">
+                <p><strong>Bill Amount:</strong> Rs. {{ total_price }}</p>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="pay-btn">Proceed to Pay</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

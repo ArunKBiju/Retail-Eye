@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="stylesheet" href="{% static 'css/wallet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<div class="container wallet-container">
+    <h2 class="text-center h2">Wallet</h2>
+    <div class="button-container">
+            <a href="{% url 'product_scan' %}" class="btn1">Purchase</a>
+            <a href="{% url 'user_logout' %}" class="btn1">Logout</a>
+
+        </div>
+    <div class="wallet-box">
+        <h4>Current Wallet Amount: <span id="walletAmount">{{ wallet.amount }}</span> INR</h4>
+    </div>
+    <form id="walletForm" method="POST" action="{% url 'add_amount' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter amount to add" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Amount</button>
+    </form>
+    <h3 class="mt-4">Transaction History</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th> </th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ transaction.amount }}</td>
+                <td>{{ transaction.date_added }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">No transactions yet</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

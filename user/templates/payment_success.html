@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="{% static 'css/pn.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment Successful</h1>
+        </header>
+        <main>
+            <p class="success-message">Thank you for your payment!</p>
+            <button onclick="window.location.href='{% url 'user_logout' %}';" class="purchase-btn">Purchase Again</button>
+        </main>
+    </div>
+</body>
+</html>

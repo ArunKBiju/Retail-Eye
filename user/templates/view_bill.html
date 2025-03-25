@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Bill</title>
+    <link rel="stylesheet" href="{% static 'css/bill.css' %}">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">-->
+</head>
+<body>
+
+<div class="container">
+    <h1>Final Bill</h1>
+
+    <table class="bill-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Item</th>
+            <th>Price (Rs)</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in view_bills %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.item }}</td>
+            <td>Rs {{ i.price }}</td>
+        </tr>
+        {% endfor %}
+        <tr class="total-row">
+            <td colspan="2"><strong>Total Price</strong></td>
+            <td><strong>Rs {{ total_price }}</strong></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="action">
+        <button onclick="window.location.href='{% url 'return_product' %}';" style="color: rgb(41 13 253); text-decoration: none;
+    font-size: 25px; font-weight: bolder; background-color: beige;">Do you want to return a product?</button>
+    </div>
+    <br>
+    <button onclick="window.location.href='{% url 'pay_now' %}';" style="color: rgb(41 13 253); text-decoration: none;
+    font-size: 25px; font-weight: bolder; background-color: beige;">Pay Now</button>
+    </div>
+</div>
+</body>
+</html>

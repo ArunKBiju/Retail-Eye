@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Product</title>
+    <link rel="stylesheet" href="{% static 'css/rp.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Return Product</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="info">
+                <p>Point your camera at the product you want to return.</p>
+                <p>Items will automatically be deducted from your bill if detected.</p>
+            </div>
+            <button type="submit" name="start-return" class="start-return-btn">Return the Product</button>
+            <a href="{% url 'billing_session' %}" class="view-bill">Billing Session</a>
+        </form>
+    </div>
+</body>
+</html>

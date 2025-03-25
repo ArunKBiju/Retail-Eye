@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Face Image</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'css/fi.css' %}"/>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url({% static 'images/shop.jpg' %})">
+			<form class="form-detail" action="#" method="post">
+				{% csrf_token %}
+				<h2>Take your Photo</h2>
+
+				{% if messages %}
+				{% for m in messages %}	1
+				<p style="color:red; text-align:center;">
+					{{m}}
+				</p>
+				{% endfor %}
+				{% endif %}
+				<center><h3>YOU'RE SUCCESSFULLY REGISTERED !!! YOUR CUSTOMER ID IS <span style="font-size:35px; text-decoration:underline;">{{ customer_id }}</span> </h3></center>
+				<div class="form-row-last">
+					<input type="submit" name="capture" class="register" value="Capture">
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>

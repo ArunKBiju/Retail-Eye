@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Dashboard</h1>
+        <button onclick="window.location.href='{% url 'user_logout' %}';" class="logout-btn">Logout</button>
+        <p class="welcome">Hello, <span id="customer-name">{{ customer_name }}</span>! Your Customer ID is: <span id="customer_id">{{ customer_id }}</span></p>
+        <div class="wallet-box">
+        <h4>Current Wallet Amount: <span id="walletAmount">{{ wallet.amount }}</span> INR</h4>
+        </div>
+    </header>
+    <main>
+        <div class="button-container">
+            <button onclick="window.location.href='{% url 'product_scan' %}';" class="dashboard-btn gradient-btn">Start Purchasing</button>
+            <button onclick="window.location.href='{% url 'wallet' %}';" class="dashboard-btn gradient-btn">Wallet</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Authorization Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

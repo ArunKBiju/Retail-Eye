@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Session</title>
+    <link rel="stylesheet" href="{% static 'css/bs.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Billing</h1>
+            <a href="{% url 'user_logout' %}" class="logout-btn">Logout</a>
+        </header>
+        <main>
+            <div class="bill-info">
+                <p><strong>Total Bill Amount:</strong> Rs. {{ total_price }}</p>
+                <p><strong>Wallet Balance:</strong> Rs. {{ wallet_amount }}</p>
+            </div>
+            <br><br>
+            <div class="actions">
+                <a href="{% url 'view_bill' %}" class="proceed-btn">Proceed</a>
+                <a href="{% url 'return_product' %}" class="return-link">Do you want to return a product?</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

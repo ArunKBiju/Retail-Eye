@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/log.css' %}">
+
+</head>
+<body>
+<div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+        <h2>Login</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="inputBx">
+                <input type="text" placeholder="Username" name="email">
+            </div>
+            <div class="inputBx">
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <div class="inputBx">
+                <input type="submit" value="Sign in">
+            </div>
+            <div class="links">
+                <a href="{% url 'otp_generate' %}">Forget Password</a>
+                <a href="{% url 'registration' %}">Signup</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

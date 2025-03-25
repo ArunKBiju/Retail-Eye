@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Scan</title>
+    <link rel="stylesheet" href="{% static 'css/ps.css' %}">
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <h1>Product Scan</h1>
+            <button type="submit" name="start-video">Start Purchase</button>
+            <a href="{% url 'add_amount' %}" class="view-bill">Add Wallet</a>
+            <a href="{% url 'user_logout' %}" class="view-bill">Logout</a>
+        </div>
+    </form>
+</body>
+</html>

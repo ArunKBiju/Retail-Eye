@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+
+</head>
+<body>
+<div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+    <div class="login">
+        <h2>Registration</h2>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="inputBx">
+            <input type="text" placeholder="Name" name="name">
+        </div>
+        <div class="inputBx">
+            <input type="email" placeholder="Email" name="email">
+        </div>
+        <div class="inputBx">
+            <input type="password" placeholder="Password" name="password">
+        </div>
+        <div class="inputBx">
+            <input type="password" placeholder="Password" name="conf_password">
+        </div>
+        <div class="inputBx">
+            <input type="submit" value="Register">
+        </div>
+        <div class="links">
+            <a href="{% url 'user_login' %}">Signin</a>
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
