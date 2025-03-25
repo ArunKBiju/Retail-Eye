@@ -1,0 +1,81 @@
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #7ed591, #a059cd);
+    color: #fbfd85;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #040404;
+    font-family: fangsong;
+    font-size: 24px;
+    color: antiquewhite;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    background: #ff4e50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #d43f42;
+}
+
+.bill-info p {
+    font-size: 3.2em;
+    margin: 10px 0;
+    padding-top: 100px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.proceed-btn {
+    padding: 15px 25px;
+    background: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.2em;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin-right: 15px;
+}
+
+.proceed-btn:hover {
+    background: #3e8c41;
+}
+
+.return-link {
+    font-size: 2.1em;
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.return-link:hover {
+    color: #ffc107;
+}

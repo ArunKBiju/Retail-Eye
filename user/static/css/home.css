@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../images/home.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading with Image inside Text */
+.text-with-image {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url('../images/title.jpg') no-repeat center center/cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: -200px;
+}
+
+/* Amoeba Shapes */
+.amoeba-container {
+    display: flex;
+    gap: 20px;
+}
+
+.amoeba {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50% 40% 60% 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.amoeba img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button */
+.start-btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: linear-gradient(45deg, #f94d6a, #ff6b6b);
+    transform: scale(1.1);
+}

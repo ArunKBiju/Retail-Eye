@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff20;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+
+.customer-info,
+.bill-info {
+    margin-bottom: 20px;
+}
+
+.customer-info p,
+.bill-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.pay-btn, .purchase-btn {
+    padding: 15px 30px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pay-btn:hover, .purchase-btn:hover {
+    background: #3e8c41;
+}
+
+.success-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}

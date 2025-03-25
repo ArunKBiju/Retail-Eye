@@ -1,0 +1,71 @@
+/* rp.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    color: #fff;
+    padding-top: 220px;
+
+}
+
+.container {
+    max-width: 800px;
+    margin: 45px auto;
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 165px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    font-size: xx-large;
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #f7f746;
+}
+
+.info p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    line-height: 1.5;
+    font-family: ui-monospace;
+}
+
+.start-return-btn {
+    background: #f53b57;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.start-return-btn:hover {
+    background: #ff6b81;
+    box-shadow: 0 4px 8px rgba(255, 107, 129, 0.6);
+}
+
+.back-to-bill {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2575fc;
+    background: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-to-bill:hover {
+    background: #dbeafe;
+    color: #1e3a8a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
